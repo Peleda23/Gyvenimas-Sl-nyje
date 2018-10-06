@@ -1,0 +1,274 @@
+/* body */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Navigation */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 1em;
+  align-items: center;
+  text-align: center;
+  background: #463C30;
+  height: 70px;
+  margin: 0;
+}
+
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+}
+
+/*Gyvenimas slenyje */
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: 100px;
+  height: 95vh; 
+  background: #F7F3EC;
+  /* text-align: center; */
+}
+
+.box1 {
+  /* border: solid 1px black; */
+  grid-column-start: 1;
+  grid-column-end: 11;
+  text-align: left;
+}
+
+.box2 {
+  /* border: solid 1px black; */
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 8;
+  text-align: center;
+}
+
+.box3 {
+  /* border: solid 1px black;  */
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  background: #584B3C;
+  height: 65vh;
+}
+
+.box4 {
+  /* border: solid 1px black; */
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 7;
+  height: 65vh;
+  width: 400px;
+  margin-left: -50px;
+  margin-top: -30px;
+}
+
+.box5 {
+  /* border: solid 1px black; */
+  grid-column-start: 6; 
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  background: #584B3C;
+  height: 65vh;
+  
+}
+
+.text {
+  justify-self: center;
+  margin-top: 65px;
+  margin-right: 200px;
+  color: #D0CBC3;
+}
+
+#text2 {
+  font-size: 30px;
+}
+
+#text3 {
+  font-weight: 700;
+}
+
+
+
+
+/* Vieta mieste */
+
+.wrapper3 {
+  display: grid;
+  grid-template-columns: 100px 450px auto 100px;
+  grid-template-rows: 160px 607px 100px;
+  height: 870px; 
+  background: #ECE2D2;
+}
+
+.item1 {
+  /* border: solid 1px black; */
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.item2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4; 
+}
+
+.item3 {
+  grid-column-start: 2;
+}
+
+.item4 {
+  grid-column-start: 3;
+}
+
+/* css grid inside css grid */
+
+.wrapper3-1 {
+  display: grid;
+  grid-template-rows: 60px 547px;
+}
+
+.item3-1 {
+  background: #584B3C;
+}
+
+.item3-2 {
+  background: #F7F3EC;
+  color: #584B3C;
+}
+
+/* css grid inside css grid navbar */
+
+.wrapper3-1-2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;  
+}
+
+.map-text {
+  margin-top: 60px;
+  margin-bottom: 150px;
+  margin-left: 57px;
+  margin-right: 57px;
+}
+
+.map-text h4 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.map-text p {
+  color: #989691;
+}
+
+.map-num {
+  font-weight: 900;
+  float: right;
+  color: #584B3C;
+}
+
+hr {
+  display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #989691;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+
+
+/* Nekilnojamojo turto vystitojas */
+
+.wrapper4 {
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr); */
+  /* height: 80vh;  */
+  /* color: white;
+  background: #171717; */
+}
+
+/* Kontaktai */
+
+.wrapper5 {
+  display: grid;
+  grid-template-columns: 2fr 2fr 0.3fr 0.7fr;
+  grid-template-rows: 80px 70px 1fr 50px 120px ;
+  height: 100vh;
+  background: #F7F3EC;
+}
+
+.itme5-1 {
+  grid-column: 1/5;
+}
+
+.itme5-2 {
+  grid-column: 1/4;
+  grid-row: 2/4;
+  background: #ECE2D2;
+}
+
+.itme5-3 {
+  grid-column: 2/3;
+  grid-row:  3/5;
+  background: #584B3C;
+
+  
+}
+
+.itme5-4 {
+  grid-row: 2/4;
+}
+
+/* .itme5-5 {
+  border: solid 1px black;
+  grid-column: 2/4;
+  grid-row: 2/4;
+  background: #ECE2D2;
+} */
+
+/* footeris */
+
+footer {
+  background: #302D28;
+}
+
+footer p {
+  color: #6E6B68;
+  margin: 0;
+  height: 60px;;
+}
+
+
