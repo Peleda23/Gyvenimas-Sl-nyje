@@ -8,7 +8,40 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Navigation */
+main {
+  max-width: 10000px;
+  margin: 0;
+}
+
+input[type=email] {
+  background: #584B3C;
+  border-width: 0px;
+  border-bottom: 1px solid #716659;
+  color: #B0AAA6;
+  font-size: 15px;
+}
+
+input[type=number] {
+  background: #584B3C;
+  border-width: 0px;
+  border-bottom: 1px solid #716659;
+  color: #B0AAA6;
+  font-size: 15px;
+}
+
+input[type=text] {
+  background: #584B3C;
+  border-width: 0px;
+  border-bottom: 1px solid #716659;
+  color: #B0AAA6;
+  font-size: 15px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+/* Navigation 3fr 1fr 1fr 1fr 1fr 1fr 1fr; */
 
 .wrapper {
   display: grid;
@@ -36,11 +69,13 @@ body {
   text-transform: uppercase;
   color: white;
   font-size: 14px;
+  max-height: 60px;
 }
 
 /*Gyvenimas slenyje */
 
 .img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: fill;
@@ -62,12 +97,27 @@ body {
   text-align: left;
 }
 
+.box1 h2 {
+  padding-left: 70px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  color: #706E6A;
+  font-weight: 900;
+}
+
 .box2 {
   /* border: solid 1px black; */
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: 8;
   text-align: center;
+}
+
+.box2 p {
+  transform: rotate(-90deg);
+  margin-top: 240px;
+  color: #999792;
+  letter-spacing: 1px;  
 }
 
 .box3 {
@@ -121,13 +171,13 @@ body {
 
 
 
-/* Vieta mieste */
+/* Vieta mieste  450px*/
 
 .wrapper3 {
   display: grid;
-  grid-template-columns: 100px 450px auto 100px;
+  grid-template-columns: 100px minmax(100px, 450px) auto 100px;
   grid-template-rows: 160px 607px 100px;
-  height: 870px; 
+  max-height: 840px; 
   background: #ECE2D2;
 }
 
@@ -135,6 +185,13 @@ body {
   /* border: solid 1px black; */
   grid-column-start: 2;
   grid-column-end: 5;
+}
+
+.item1 h1 {
+  color: #706E6A;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-top: 40px;
 }
 
 .item2 {
@@ -171,9 +228,33 @@ body {
 /* css grid inside css grid navbar */
 
 .wrapper3-1-2 {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(7, 1fr);
-  justify-items: center;  
+  justify-items: center; 
+  width: 100%;
+  overflow: auto; */
+  width: 100%;
+  text-align: center;
+  
+  overflow: auto;
+}
+.wrapper3-1-2 a {
+  width: 14%;
+  padding: 5px 0;
+  float: left;
+  transition: all 0.3s ease;
+  font-size: 36px;
+  border-left: 1px solid #F7F3EC
+}
+
+.wrapper3-1-2 a:hover {
+  background: #9CB16D;
+}
+
+
+.big-icon {
+  font-size: 20px;
+  display: block;
 }
 
 .map-text {
@@ -211,20 +292,12 @@ hr {
 
 /* Nekilnojamojo turto vystitojas */
 
-.wrapper4 {
-  /* display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr); */
-  /* height: 80vh;  */
-  /* color: white;
-  background: #171717; */
-}
 
 /* Kontaktai */
 
 .wrapper5 {
   display: grid;
-  grid-template-columns: 2fr 2fr 0.3fr 0.7fr;
+  grid-template-columns: 2fr 1.6fr 0.3fr 0.7fr;
   grid-template-rows: 80px 70px 1fr 50px 120px ;
   height: 100vh;
   background: #F7F3EC;
@@ -244,20 +317,111 @@ hr {
   grid-column: 2/3;
   grid-row:  3/5;
   background: #584B3C;
-
-  
 }
 
 .itme5-4 {
   grid-row: 2/4;
 }
 
-/* .itme5-5 {
-  border: solid 1px black;
-  grid-column: 2/4;
+.itme5-5 {
+  grid-column: 1/2;
   grid-row: 2/4;
   background: #ECE2D2;
+}
+
+.img2 {
+  display: block;
+  width: 170px;
+  height: 150px;
+  object-fit: fill;
+}
+
+.wrapper5-1 {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 3fr 0.5fr;
+  grid-template-rows: 1fr 1fr 4fr 1fr;
+  max-height: 500px;
+}
+
+.itme5-1-1 {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  border: solid 1px black;
+  font-size: 40px;
+}
+
+.item5-1-2 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin: 0px 5px 0px 5px;
+}
+
+.item5-1-3 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  margin: 0px 5px 0px 5px;
+}
+
+
+
+/* forma */
+
+.container {
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  grid-template-rows: 3fr 2fr 2fr 2fr 2fr 2fr auto 3fr;
+  grid-gap: 5%;
+}
+
+/* .flex {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
 } */
+
+.form1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.form2 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.form3 {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+.form4 {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+
+.form5 {
+  grid-column: 2/3;
+  grid-row: 7/8;
+}
+
+.form-text {
+  color: #D0CBC3;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.button {
+  background: #879E59;
+  border: none;
+  color: #D0CBC3;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
 
 /* footeris */
 
