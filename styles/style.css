@@ -37,15 +37,18 @@ input[type=text] {
   font-size: 15px;
 }
 
-.strong {
-  font-weight: bold;
+.img3 {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
 }
+
 
 /* Navigation 3fr 1fr 1fr 1fr 1fr 1fr 1fr; */
 
-.wrapper {
+.nav-grid {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr repeat(6, 1fr);
   grid-auto-rows: auto;
   grid-gap: 1em;
   align-items: center;
@@ -75,29 +78,29 @@ input[type=text] {
 /*Gyvenimas slenyje */
 
 .img {
-  display: block;
-  width: 100%;
-  height: 100%;
   object-fit: fill;
+  max-width: 100%;
+  min-width: 150px; 
+  height: 100%;
 }
 
-.wrapper2 {
+.grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(auto-fill, 10, 1fr);
   grid-auto-rows: 100px;
   height: 95vh; 
   background: #F7F3EC;
   /* text-align: center; */
 }
 
-.box1 {
+.grid div:nth-child(1) {
   /* border: solid 1px black; */
   grid-column-start: 1;
   grid-column-end: 11;
   text-align: left;
 }
 
-.box1 h2 {
+.grid div:nth-child(1) h2 {
   padding-left: 70px;
   text-transform: uppercase;
   margin-top: 30px;
@@ -105,7 +108,7 @@ input[type=text] {
   font-weight: 900;
 }
 
-.box2 {
+.grid div:nth-child(2) {
   /* border: solid 1px black; */
   grid-column-start: 1;
   grid-row-start: 2;
@@ -113,14 +116,14 @@ input[type=text] {
   text-align: center;
 }
 
-.box2 p {
+.grid div:nth-child(2) p {
   transform: rotate(-90deg);
   margin-top: 240px;
   color: #999792;
   letter-spacing: 1px;  
 }
 
-.box3 {
+.grid div:nth-child(3) {
   /* border: solid 1px black;  */
   grid-column-start: 2;
   grid-column-end: 10;
@@ -130,19 +133,19 @@ input[type=text] {
   height: 65vh;
 }
 
-.box4 {
+.grid div:nth-child(4) {
   /* border: solid 1px black; */
   grid-column-start: 3;
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 7;
   height: 65vh;
-  width: 400px;
-  margin-left: -50px;
+  max-width: 400px;
+  margin-left: 70px;
   margin-top: -30px;
 }
 
-.box5 {
+.grid div:nth-child(5) {
   /* border: solid 1px black; */
   grid-column-start: 6; 
   grid-column-end: 11;
@@ -156,8 +159,10 @@ input[type=text] {
 .text {
   justify-self: center;
   margin-top: 65px;
-  margin-right: 200px;
+  margin-right: 40%;
+  margin-left: 10%;
   color: #D0CBC3;
+  display: inline-block;
 }
 
 #text2 {
@@ -168,12 +173,27 @@ input[type=text] {
   font-weight: 700;
 }
 
+.button2 {
+  background: #584B3C;
+  border: 1px solid #D0CBC3;
+  color: #D0CBC3;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+
+
 
 
 
 /* Vieta mieste  450px*/
 
-.wrapper3 {
+.grid2 {
   display: grid;
   grid-template-columns: 100px minmax(100px, 450px) auto 100px;
   grid-template-rows: 160px 607px 100px;
@@ -229,10 +249,7 @@ input[type=text] {
 
 .wrapper3-1-2 {
   /* display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  justify-items: center; 
-  width: 100%;
-  overflow: auto; */
+  grid-template-columns: repeat(auto-fit, 7, 1fr); */
   width: 100%;
   text-align: center;
   
@@ -291,7 +308,9 @@ hr {
 
 
 /* Nekilnojamojo turto vystitojas */
-
+/* .wrapper4 {
+  height: 85vh;
+} */
 
 /* Kontaktai */
 
