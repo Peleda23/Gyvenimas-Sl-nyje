@@ -238,6 +238,7 @@ input[type=text] {
 
 .item3 {
   grid-column-start: 2;
+  width: 100%
 }
 
 .item4 {
@@ -270,8 +271,7 @@ input[type=text] {
   grid-template-columns: repeat(auto-fit, 7, 1fr); */
   width: 100%;
   text-align: center;
-  
-  overflow: auto;
+  /* overflow: auto; */
 }
 .wrapper3-1-2 a {
   width: 14%;
@@ -280,18 +280,20 @@ input[type=text] {
   transition: all 0.3s ease;
   font-size: 36px;
   height: 100px;
+  
+}
 
-  border-left: 1px solid #F7F3EC;
+.nav-map {
+  margin-left: 4px;
+}
+
+#no-border {
+
+  border: none;
 }
 
 .wrapper3-1-2 a:hover {
   background: #9CB16D;
-}
-
-.nav-map {
-  height: 100%;
-  
-  
 }
 
 
@@ -299,13 +301,16 @@ input[type=text] {
   font-size: 20px;
   display: block;
   margin-top: 14px;
+  border-left: 1px solid #F7F3EC;
+  color: white;
+  
 }
 
 .map-text {
   margin-top: 60px;
   margin-bottom: 150px;
-  margin-left: 57px;
-  margin-right: 57px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .map-text h4 {
@@ -315,6 +320,7 @@ input[type=text] {
 
 .map-text p {
   color: #989691;
+  font-size: 14px;
 }
 
 .map-num {
@@ -331,14 +337,6 @@ hr {
     margin: 1em 0;
     padding: 0; 
 }
-
-
-
-/* Nekilnojamojo turto vystitojas */
-/* .wrapper4 {
-  height: 85vh;
-} */
-
 /* Kontaktai */
 
 .wrapper5 {
@@ -543,18 +541,21 @@ footer p:nth-child(2) {
 
  .mapouter {
     text-align:right;
-    height:650px;
-    width:752px;
-    
+    height: 82vh; 
+    width: 60vw;
+    margin: 0 auto;
+    /* position: relative; */
   }
 
   .gmap_canvas {
     overflow:hidden;
     background:none!important;
     height:100%;
-    width:100%;
-    
+    max-width:750px;
   }
+
+
+
 
 
 
